@@ -1,4 +1,4 @@
-# 🤖 RAG Chat Backend
+# RAG Agent Backend
 
 A fully local, production-ready RAG (Retrieval-Augmented Generation) backend — no cloud APIs, no paid services.
 
