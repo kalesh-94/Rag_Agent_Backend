@@ -1,0 +1,27 @@
+
+fastapi==0.115.5
+uvicorn[standard]==0.32.1        # ASGI server to run FastAPI
+
+pydantic==2.10.3
+pydantic-settings==2.6.1         # for Settings class with .env support
+
+faiss-cpu==1.9.0                 # CPU version (use faiss-gpu if you have CUDA)
+
+# ───────----------------->>>>>>>>>>>>>
+# Embeddings - Local Sentence Transformers
+
+sentence-transformers==3.3.1     # provides all-MiniLM-L6-v2
+torch==2.5.1                     # required by sentence-transformers  -------------->> CPU only
+
+
+langchain==0.3.12
+langchain-core==0.3.25
+langgraph==0.2.59
+
+
+requests==2.32.3
+
+
+numpy==1.26.4                    
+python-dotenv==1.0.1             
+python-multipart==0.0.9
