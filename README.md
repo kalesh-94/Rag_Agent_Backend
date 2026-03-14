@@ -318,3 +318,9 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
 > OLLama must run separately — on the host or as a sidecar container. Pass `OLLAMA_BASE_URL=http://host.docker.internal:11434` as an env var when running the container on macOS/Windows, or use the host's IP on Linux.
+
+
+**This project is licensed under the MIT License.**
+
+**Copyright (c) 2026 Kalesh Patil**
+
