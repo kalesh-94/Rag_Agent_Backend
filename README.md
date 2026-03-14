@@ -103,8 +103,8 @@ Meta's Llama 3 (8B) outperforms Mistral 7B on instruction-following and open-dom
 ### Step 1 — Install OLLama
 
 ```bash
-# windows
-pip install ollama
+# mac
+brew install ollama
 
 # Linux
 curl -fsSL https://ollama.ai/install.sh | sh
