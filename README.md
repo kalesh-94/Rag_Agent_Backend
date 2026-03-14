@@ -43,8 +43,6 @@ rag_project/
 │   ├── services/
 │   │   └── memory_service.py        # Chat history CRUD (SQLite)
 │   └── main.py                      # FastAPI app entry point
-├── tests/
-│   └── test_api.py
 ├── .env
 ├── requirements.txt
 └── README.md
@@ -105,8 +103,8 @@ Meta's Llama 3 (8B) outperforms Mistral 7B on instruction-following and open-dom
 ### Step 1 — Install OLLama
 
 ```bash
-# macOS
-brew install ollama
+# windows
+pip install ollama
 
 # Linux
 curl -fsSL https://ollama.ai/install.sh | sh
@@ -142,7 +140,7 @@ pip install -r requirements.txt
 ### Step 5 — Run the Server
 
 ```bash
-uvicorn app.main:app --reload --port 8000
+uvicorn main:app --reload --port 8000
 ```
 
 | URL | Purpose |
@@ -280,15 +278,7 @@ POST /chat  { thread_id, message }
 
 Change the model by updating `OLLAMA_MODEL` in `.env`.
 
----
-
-## Run Tests
-
-```bash
-pytest tests/ -v
-```
-
----
+--
 
 ## Troubleshooting
 
@@ -324,7 +314,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 EXPOSE 8000
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
 > OLLama must run separately — on the host or as a sidecar container. Pass `OLLAMA_BASE_URL=http://host.docker.internal:11434` as an env var when running the container on macOS/Windows, or use the host's IP on Linux.
